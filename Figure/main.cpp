@@ -1,10 +1,7 @@
-﻿//#include <windows.h>
-#include <iostream>
+﻿#include <iostream>
 #include <math.h>
 #include <ctime>
 #include <algorithm>
-
-//#include <cmath>
 
 //using namespace std;
 //using std::cout;
@@ -19,14 +16,6 @@ class Figure
 
 
 public:
-	virtual double calc_perimeter() = 0;
-	virtual double calc_square() = 0;
-
-	virtual void print()
-	{
-		std::cout << "Perimiter = " << this->calc_perimeter() << std::endl;
-		std::cout << "Square = " << this->calc_square() << std::endl;
-	}
 
 	// Constructors
 
@@ -38,6 +27,16 @@ public:
 	virtual ~Figure()
 	{
 		std::cout << "Figure_Destructor:\t" << this << std::endl;
+	}
+
+	// Methods
+	virtual double calc_perimeter() = 0;
+	virtual double calc_square() = 0;
+
+	virtual void print()
+	{
+		std::cout << "Perimiter = " << this->calc_perimeter() << std::endl;
+		std::cout << "Square = " << this->calc_square() << std::endl;
 	}
 };
 
